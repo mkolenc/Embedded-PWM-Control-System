@@ -587,7 +587,7 @@ int main(void)
         uint32_t pot_value = POT_read(); // Should read [0, 4095]
 
         // Relay digital value to DAC
-        DAC->DHR12R1 = pot_value;
+        DAC->DHR12R1 = pot_2value;
 
         // Calculate and set the Resistance value
         Resistance = ((uint32_t)((pot_value / ADC_MAX_VALUE) * RESITANCE_MAX_VALUE))
